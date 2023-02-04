@@ -1,24 +1,22 @@
 import logo from "./logo.svg";
-import "./App.css";
+import React, { useState, useEffect } from "react";
+// import "./App.css";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // setInterval(() => {
+    //   console.log("当前值：", count);
+    // }, 1000);
+  }, [count]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          11.23 2
-        </a>
-      </header>
-    </div>
+    <>
+      count: {count}
+      <br />
+      <button onClick={() => setCount((val) => val + 1)}>增加 1</button>
+    </>
   );
 }
 
