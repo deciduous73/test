@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    // 测试
+    // 测试22
     // setInterval(() => {
     //   console.log("当前值：", count);
     // }, 1000);
